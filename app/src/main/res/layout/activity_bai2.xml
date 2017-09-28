@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBlack">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_color1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="color 1"
+            android:textColor="@color/colorRed" />
+
+        <Button
+            android:id="@+id/btn_color2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="color 2"
+            android:textColor="@color/colorYellow" />
+
+        <Button
+            android:id="@+id/btn_color3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="color 3"
+            android:textColor="@color/colorBlue" />
+    </TableRow>
+
+    <TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="#FFEB3B"></View>
+
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_column="2"
+            android:text="clear"
+            android:textColor="@color/colorBlack" />
+    </TableRow>
+
+</TableLayout>
