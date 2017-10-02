@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Demo Layout</string>
+    <string name="bai1">Bài 1</string>
+    <string name="bai2">Bài 2</string>
+    <string name="bai4">Bài 4</string>
 </resources>
