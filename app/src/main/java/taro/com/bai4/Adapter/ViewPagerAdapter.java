@@ -1,9 +1,14 @@
-package taro.com.bai4;
+package taro.com.bai4.Adapter;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import taro.com.bai4.Fragment.FragmentBai1;
+import taro.com.bai4.Fragment.FragmentBai2;
+import taro.com.bai4.Fragment.FragmentBai4;
+import taro.com.bai4.R;
 
 /**
  * Created by VjrutNAT on 10/2/2017.

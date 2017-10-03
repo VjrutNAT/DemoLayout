@@ -1,10 +1,13 @@
-package taro.com.bai4;
+package taro.com.bai4.Activity;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import taro.com.bai4.R;
+import taro.com.bai4.Adapter.ViewPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 

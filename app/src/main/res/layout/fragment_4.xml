@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context="taro.com.bai4.MainActivity">
+    tools:context="taro.com.bai4.Activity.MainActivity">
 
     <Button
         android:id="@+id/btn5"

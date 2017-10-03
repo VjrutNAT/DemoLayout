@@ -1,4 +1,4 @@
-package taro.com.bai4;
+package taro.com.bai4.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -11,16 +11,21 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import taro.com.bai4.R;
+
 /**
  * Created by VjrutNAT on 10/2/2017.
  */
 
-public class FragmentBai1 extends Fragment implements RadioGroup.OnCheckedChangeListener, View.OnClickListener {
+public class FragmentBai1 extends Fragment implements View.OnClickListener {
 
     private View mBackground;
     private Button btnSetColor;
     private Button btnCancel;
     private RadioGroup radioGroup;
+    private RadioButton mRbRed;
+    private RadioButton mRbGreen;
+    private RadioButton mRbBlue;
 
     @Nullable
     @Override
@@ -28,6 +33,9 @@ public class FragmentBai1 extends Fragment implements RadioGroup.OnCheckedChange
         View view = inflater.inflate(R.layout.fragment_1, container, false);
 
         radioGroup = view.findViewById(R.id.rg);
+        mRbRed = view.findViewById(R.id.rbRed);
+        mRbGreen = view.findViewById(R.id.rbGreen);
+        mRbBlue = view.findViewById(R.id.rbBlue);
 
         btnSetColor = view.findViewById(R.id.btn_set_color);
         btnCancel = view.findViewById(R.id.btn_cancel);
@@ -39,29 +47,40 @@ public class FragmentBai1 extends Fragment implements RadioGroup.OnCheckedChange
         return view;
     }
 
-    @Override
-    public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
-        switch (i){
+    public void onRadioButtonClicked(View view) {
+
+        boolean checked = ((RadioButton) view).isChecked();
+
+        switch(view.getId()) {
             case R.id.rbRed:
+                if (checked)
                     mBackground.setBackgroundResource(R.color.colorRed);
-                break;
+                    break;
             case R.id.rbGreen:
+                if (checked)
                     mBackground.setBackgroundResource(R.color.colorGreen);
-                break;
+                    break;
             case R.id.rbBlue:
+                if (checked)
                     mBackground.setBackgroundResource(R.color.colorBlue);
-                break;
+                    break;
         }
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
+            case R.id.btn_set_color:
+                if(mRbRed.isChecked()){
+                    onRadioButtonClicked(mRbRed);
+                }else if (mRbGreen.isChecked()){
+                    onRadioButtonClicked(mRbGreen);
+                }else if (mRbBlue.isChecked()){
+                    onRadioButtonClicked(mRbBlue);
+                }
+                break;
             case R.id.btn_cancel:
                 mBackground.setBackgroundResource(R.color.colorBlack);
-                break;
-            case R.id.btn_set_color:
-                radioGroup.setOnCheckedChangeListener(this);
                 break;
         }
     }

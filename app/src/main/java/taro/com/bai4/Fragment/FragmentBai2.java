@@ -1,4 +1,4 @@
-package taro.com.bai4;
+package taro.com.bai4.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import taro.com.bai4.R;
 
 /**
  * Created by VjrutNAT on 10/2/2017.
